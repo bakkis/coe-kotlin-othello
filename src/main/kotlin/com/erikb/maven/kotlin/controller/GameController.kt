@@ -10,7 +10,7 @@ fun runGame(game: Game) {
 
     while (game.status == Status.ACTIVE) {
 
-        print("Player " + game.player.name + ", make your move: ")
+        printMakeYourMove(game.player)
 
         val input = readLine()!!
 
@@ -21,7 +21,6 @@ fun runGame(game: Game) {
             if (runMove(game, row, column, game.player, true)) {
                 game.board[row][column] = put(game.board[row][column], game.player.nr)
                 printBoard(game.board)
-
 
                 if (availableMoves(game, switchPlayer(game.player))) {
                     game.player = switchPlayer(game.player)
