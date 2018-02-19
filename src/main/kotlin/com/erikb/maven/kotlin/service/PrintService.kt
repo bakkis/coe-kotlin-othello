@@ -15,10 +15,10 @@ fun printBoard(board: Array<IntArray>) {
         }
         println()
     }
+    println()
 }
 
 fun printScore(score: Score) {
-    println()
     println("Score:")
     println("------------------------------")
     println("Player ONE: " + score.playerOne)
