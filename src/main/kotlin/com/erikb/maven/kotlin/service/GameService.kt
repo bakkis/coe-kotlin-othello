@@ -102,9 +102,9 @@ fun fillSpace(space: Int): String {
 }
 
 fun isValid(input: String): Boolean {
+    if(input.length != 2) return false
     if(!rows().contains(input[0].toString().toUpperCase())) return false
     if(!columns().contains(input[1].toString())) return false
-
     return true
 }
 
