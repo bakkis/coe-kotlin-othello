@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Welcome to My Othello Page Docs
 
 You can use the [editor on GitHub](https://github.com/bakkis/coe-kotlin-othello/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
