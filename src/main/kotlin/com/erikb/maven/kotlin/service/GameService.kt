@@ -19,10 +19,10 @@ fun getScore(game: Game): Score {
     var playerOne = 0
     var playerTwo = 0
 
-    for (i in 1..game.height - 2) {
-        for (j in 1..game.width - 2) {
-            if (game.board[i][j] == Player.ONE.nr) playerOne++
-            if (game.board[i][j] == Player.TWO.nr) playerTwo++
+    for (row in 1..game.height - 2) {
+        for (column in 1..game.width - 2) {
+            if (game.board[row][column] == Player.ONE.nr) playerOne++
+            if (game.board[row][column] == Player.TWO.nr) playerTwo++
         }
     }
 
@@ -46,11 +46,10 @@ fun runMove(game: Game, row: Int, column: Int, player: Player, flip: Boolean): B
                 posColumn = column + x
                 posRow = row + y
                 found = false
-                current = game.board[posRow][posColumn];
+                current = game.board[posRow][posColumn]
 
-                if (current == -1 || current == 0 || current == player.nr) {
-                    continue
-                }
+                // Skip rest of loop if space is not opposite player
+                if (current == -1 || current == 0 || current == player.nr) continue
 
                 while (!found) {
                     posColumn += x
@@ -140,6 +139,3 @@ fun switchPlayer(player: Player): Player {
         Player.TWO -> Player.ONE
     }
 }
-
-
-
